@@ -1,0 +1,12 @@
+<apex:page controller="inputCsvController">
+    <apex:form >
+        <table border="0" style="width: 100%;">
+            <tr>
+            <td><apex:inputFile value="{!file}"/></td>
+            <td>
+                <apex:commandButton value="取込" action="{!ImportBtn}" />
+            </td>
+            </tr>
+        </table>
+    </apex:form>
+</apex:page>

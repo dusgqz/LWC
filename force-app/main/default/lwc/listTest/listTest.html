@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="accountList" icon-name="standard:account">
+        <lightning-datatable
+            key-field="id"
+            data={accdata.data}
+            show-row-number-column
+            row-number-offset={rowOffset}
+            columns = {columnList}
+            >
+        </lightning-datatable>
+    </lightning-card>
+    <lightning-card  variant="Narrow"  title="recordForm" icon-name="standard:account">
+        <lightning-record-form
+            object-api-name={objectApiName}
+            fields = {fields}
+            onsuccess = {handleSuccess}
+        >
+        </lightning-record-form>
+    </lightning-card>
+</template>

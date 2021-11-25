@@ -1,0 +1,28 @@
+<template>    
+    <div style="height: 640px;">
+        <section>
+            <div>
+                <header>
+                    <button title="Close" onclick={handleCancelClick}>
+                        <lightning-icon icon-name="utility:close" size="medium"></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                </header>
+                <div>
+                    <lightning-spinner if:true={isProgress} size="large"></lightning-spinner>
+                    <lightning-input 
+                                    type="file" 
+                                    label="祝日情報取込"
+                                    accept="text/csv"
+                                    onchange={handleChangeFile}>
+                    </lightning-input>
+                    <p>{fileName}</p>
+                </div>
+                <footer>
+                    <lightning-button label="Cancel" variant="neutral" onclick={handleCancelClick}></lightning-button>
+                    <lightning-button disabled={isNotChooseFile} label="Import" variant="brand" onclick={handleConfirmImportClick}></lightning-button>
+                </footer>
+            </div>
+        </section>
+    </div>    
+</template>

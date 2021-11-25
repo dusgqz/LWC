@@ -1,0 +1,12 @@
+<template>
+    <p class="slds-m-vertical_medium content">Page {pageko}</p>
+    <lightning-layout>
+        <lightning-layout-item>
+            <lightning-button label="< 前へ" icon-name="utility:chevronleft" onclick={previousHandler}></lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item flexibility="grow"></lightning-layout-item>
+        <lightning-layout-item>
+            <lightning-button label="> 次へ" icon-name="utility:chevronright" icon-position="right" onclick={nextHandler}></lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

@@ -1,0 +1,11 @@
+<apex:page standardController="Case" recordSetvar="cases" extensions="CaseExtensionsController"
+action="{!create}"
+sidebar="false"
+showHeader="false"
+contentType="text/csv;charset=Shift-JIS#{!fileName}"
+readOnly="true"
+title="CSV出力">
+
+<apex:outputText value="{!data}" />
+
+</apex:page>

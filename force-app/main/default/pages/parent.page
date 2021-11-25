@@ -1,0 +1,18 @@
+<apex:page >
+    <head>
+        <script>
+
+            function openwin1(){
+                console.log('wang');
+                window.open('/apex/son','');
+            }
+
+            function printtest(){
+                console.log('wangpeng');
+            }
+            </script>
+    </head>
+    <apex:form >
+        <apex:commandButton value="open" onclick="openwin1()"></apex:commandButton>
+    </apex:form>
+</apex:page>

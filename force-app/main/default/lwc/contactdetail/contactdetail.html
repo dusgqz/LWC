@@ -1,0 +1,67 @@
+<template>
+    <lightning-accordion active-section-name="TextSection">
+    <lightning-accordion-section name="TextSection" label="Text Section">
+        <!-- TEXT -->
+        <div class="slds-m-bottom_medium">
+            <div class="slds-m-bottom_small">
+                <lightning-input type="text" label="テキスト" data-id="inputName" onkeyup={onNameChanged}></lightning-input>
+            </div>
+            <div class="slds-box slds-theme_default">
+                <p class="slds-text-title">Hello {name}!</p>
+            </div>
+            <div class="slds-box slds-theme_default">
+                <p class="slds-text-title">Hello {phone}!</p>
+            </div>
+        </div>
+    </lightning-accordion-section>
+    <lightning-accordion-section name="TextSection33" label="Text Section2">
+        <!-- TEXT -->
+        <div class="slds-m-bottom_medium">
+            <div class="slds-m-bottom_small">
+                <lightning-input type="text" label="テキスト" data-id="inputName" onkeyup={onNameChanged}></lightning-input>
+            </div>
+            <div class="slds-box slds-theme_default">
+                <p class="slds-text-title">Hello {name}!</p>
+            </div>
+        </div>
+    </lightning-accordion-section>
+</lightning-accordion>
+    <lightning-record-edit-form object-api-name="Contact" record-id={recordId}>
+        <lightning-messages>
+        </lightning-messages>
+        <lightning-accordion active-section-name="TextSection1">
+        <lightning-accordion-section name="TextSection" label="Text Section">
+            <!-- TEXT -->
+            <div class="slds-m-bottom_medium">
+                <div class="slds-m-bottom_small">
+                    <lightning-input type="text" label="テキスト" data-id="inputName" onkeyup={onNameChanged}></lightning-input>
+                </div>
+                <div class="slds-box slds-theme_default">
+                    <p class="slds-text-title">Hello {name}!</p>
+                </div>
+            </div>
+        </lightning-accordion-section>
+    </lightning-accordion>
+        <!--<table>
+            <tr>
+                <td><lightning-input-field field-name="Name"></lightning-input-field></td>
+            </tr>
+            <tr>
+                <td><lightning-input-field field-name="Email"></lightning-input-field></td>
+            </tr>
+        </table>-->
+    
+        <lightning-button
+            class="slds-m-top_small"
+            type="button"
+            label="キャンセル"
+            onclick = {can}>
+        </lightning-button>
+        <lightning-button
+            class="slds-m-top_small"
+            type="submit"
+            label="update" 
+            onclick = {handleClick}>
+        </lightning-button>
+    </lightning-record-edit-form>
+</template>

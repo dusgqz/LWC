@@ -1,0 +1,36 @@
+<template>
+    <lightning-card icon-name="standard:contact">
+        <!--
+        <template if:true={contact.data}>
+            <p>★取得データ</p>
+            <p>{name}</p>
+            <p><lightning-formatted-phone value={phone}></lightning-formatted-phone></p>
+        </template>
+    -->
+
+        <template if:true={contact.data}>
+            <lightning-record-form record-id={recordId}
+                object-api-name={objectApiName}
+                fields={fields}
+                onsuccess={handleSuccess}
+            >
+            </lightning-record-form>
+        </template>
+        <!--
+        <p>1</p>
+        <lightning-record-form record-id={recordId} object-api-name={objectApiName} fields={fields}>
+        </lightning-record-form>
+    
+        <p>2</p>
+        <lightning-record-form record-id={recordId} object-api-name={objectApiName} fields={fields} mode="view">
+        </lightning-record-form>
+    
+        <p>3</p>
+        <lightning-record-form record-id={recordId} object-api-name={objectApiName} fields={fields} mode="edit">
+        </lightning-record-form>
+        <p>4</p>
+        <lightning-record-form record-id={recordId} object-api-name={objectApiName} fields={fields} mode="readonly">
+        </lightning-record-form>
+        -->
+    </lightning-card>
+</template>

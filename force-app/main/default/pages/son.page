@@ -1,0 +1,12 @@
+<apex:page >
+    <head>
+        <script>
+            function cakunin(){
+                window.opener.printtest();
+            }
+            </script>
+    </head>
+    <apex:form >
+        <apex:commandButton value="確認" onclick="cakunin()"></apex:commandButton>
+    </apex:form>
+</apex:page>

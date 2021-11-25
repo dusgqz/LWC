@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="CSVアップロード" icon-name="custom:custom15">
+        <lightning-input type="file" name="csv" label="CSV" onchange={handleCsvUpload} accept="text/csv"></lightning-input>
+        <p>{fileName}</p>
+        <div
+          if:true={isLoaded}
+          class="slds-is-relative"
+          style="
+            height: 60px;
+            margin: 0 0 -10px 0;
+          "
+        >
+          <lightning-spinner alternative-text="Loading..." variant="brand"></lightning-spinner>
+        </div>
+        <div if:false={isLoaded}>
+            <div if:true={isSend}>
+              <lightning-button
+                  variant="brand"
+                  label="送信"
+                  title="Primary action"
+                  onclick={handleUpload}
+                  class="slds-m-left_x-small">
+              </lightning-button>
+            </div>
+            <div if:false={isSend}>
+              <lightning-button
+                variant="brand"
+                label="送信"
+                disabled
+                title="Primary action"
+                onclick={handleUpload}
+                class="slds-m-left_x-small">
+              </lightning-button>
+            </div>
+          </div>
+    </lightning-card>
+</template>

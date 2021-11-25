@@ -1,0 +1,19 @@
+<apex:page standardController="Account" recordSetvar="accounts"  extensions="AccountExtensionsController">
+  <apex:pageBlock title="Viewing Accounts">
+  <apex:form id="theForm">
+    <apex:panelGrid columns="2">
+      <apex:outputLabel value="View:"/>
+      <apex:selectList value="{!filterId}" size="1">
+        <apex:actionSupport event="onchange" rerender="list"/>
+        <apex:selectOptions value="{!listviewoptions}"/>
+      </apex:selectList>
+    </apex:panelGrid>
+    <apex:pageBlockSection >
+      <apex:dataList var="a" value="{!accounts}" id="list">
+        {!a.name} {!a.Fax}
+      </apex:dataList>
+    </apex:pageBlockSection>
+    <apex:commandButton value="test" action="{!test}"></apex:commandButton>
+  </apex:form>
+  </apex:pageBlock>
+</apex:page>

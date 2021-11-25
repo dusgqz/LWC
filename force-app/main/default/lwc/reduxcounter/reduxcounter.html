@@ -1,0 +1,8 @@
+<template>
+    <c-provider oninit={initialize} store={store}>
+    <lightning-card>
+        <lightning-input label="input a value" type="test" value ={valueTemp} onchange={changehandle}></lightning-input>
+        <p>value:{valueTemp}</p>
+    </lightning-card>
+</c-provider>
+</template>
